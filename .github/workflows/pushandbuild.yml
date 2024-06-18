@@ -33,7 +33,7 @@ jobs:
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-express-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
 
 
     
