@@ -37,7 +37,7 @@ jobs:
 
 
   build_on_remote_server:
-    runs-on:  [self-hosted, chhatra-ubuntu-server]
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
