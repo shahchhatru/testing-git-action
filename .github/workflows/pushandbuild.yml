@@ -55,7 +55,7 @@ jobs:
       - name: Run Docker image
         env:
           TEST-URI: ${{ secrets.TEST_URI }}
-        run: sudo docker run -d ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest --env TEST_URI=$TEST_URI
+        run: sudo docker run ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest --env TEST_URI=$TEST_URI
 
   
 
