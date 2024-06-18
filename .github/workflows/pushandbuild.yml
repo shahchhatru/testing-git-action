@@ -37,7 +37,7 @@ jobs:
 
 
   build_on_remote_server:
-    runs-on: chhatra-ubuntu-server
+    runs-on:  [self-hosted, chhatra-ubuntu-server]
 
     steps:
       - name: Checkout repository
@@ -56,7 +56,7 @@ jobs:
         env:
           TEST-URI: ${{ secrets.TEST_URI }}
         run: docker run -d ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest --env TEST_URI=$TEST_URI
-        
+
   
 
 
