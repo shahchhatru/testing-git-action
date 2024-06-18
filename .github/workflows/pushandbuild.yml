@@ -50,12 +50,12 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
         
       - name: Pull Docker image
-        run: docker pull ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
+        run: sudo docker pull ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest
 
       - name: Run Docker image
         env:
           TEST-URI: ${{ secrets.TEST_URI }}
-        run: docker run -d ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest --env TEST_URI=$TEST_URI
+        run: sudo docker run -d ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest --env TEST_URI=$TEST_URI
 
   
 
